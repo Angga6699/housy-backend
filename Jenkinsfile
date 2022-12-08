@@ -1,4 +1,4 @@
-def branch = "master"
+def branch = "main"
 def rname = "origin"
 def dir = "~/housy-backend/"
 def credential = 'cicd'
