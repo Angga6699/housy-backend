@@ -1,10 +1,10 @@
 version: '3.8'
 services:
  backend:
-   #build: .
+   build: .
    container_name: backend
-   image: angga/housy-backend
-   restart: unless-stopped
+   image: angga6699/housy-backend
+  # restart: unless-stopped
    stdin_open: true
    ports:
     - 5000:5000

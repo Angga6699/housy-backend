@@ -3,7 +3,7 @@
     "username": "angga",
     "password": "P4ssw0rd",
     "database": "housy",
-    "host": "10.71.15.220",
+    "host": "10.71.15.108",
     "dialect": "mysql"
   },
   "test": {
