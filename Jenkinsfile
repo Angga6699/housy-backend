@@ -55,7 +55,7 @@ pipeline {
                 sshagent([credential]){
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
                     cd ${dir}
-                    docker image push ${img}:${env.BUILD_ID}-latest
+                    docker image push ${img}:latest
                     exit
                     EOF"""
                 }
