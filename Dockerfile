@@ -1,6 +1,6 @@
 FROM node:10.10.0-alpine
 
-#ENV NODE_ENV development
+##ENV NODE_ENV development
 
 WORKDIR /home/root
 COPY . .
