@@ -1,4 +1,4 @@
-def branch = "master"
+def branch = "main"
 def rname = "origin"
 def dir = "~/housy-backend/"
 def credential = 'cicd'
@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sshagent([credential]){
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
-                    echo "Pulling Wayshub Backend Repository"
+                    echo "Pulling Housy Backend Repository"
                     cd ${dir}
                     docker container stop ${cont}
                     docker rm ${cont}
@@ -55,7 +55,7 @@ pipeline {
                 sshagent([credential]){
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
                     cd ${dir}
-                    docker push ${img}:${env.BUILD_ID}-latest
+                    docker image push ${img}:latest
                     exit
                     EOF"""
                 }
@@ -63,4 +63,3 @@ pipeline {
         }
     }
 }
-
